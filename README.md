@@ -20,3 +20,5 @@ For now it works but isn't perfect yet so please improve, such as:
 - ...
 
 ![Windspeed and -direction](https://github.com/user-attachments/assets/03c23231-667f-4b2a-9844-245ac759b7f6)
+
+Added translation in Dutch
