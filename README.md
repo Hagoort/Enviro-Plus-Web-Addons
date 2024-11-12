@@ -13,6 +13,6 @@ Make an free API call no more than once in 10 minutes for your location otherwis
 The update frequency of the OpenWeather model is not higher than once in 10 minutes
 The update frequency is set in Enviroplusweb.py to 10 minutes/600 seconds before fetching data again
 
-For now it works but isn't perfect yet so please improve.
+For now it works but isn't perfect yet so please improve, such as stepSize in main.js
 
 ![Windspeed and -direction](https://github.com/user-attachments/assets/03c23231-667f-4b2a-9844-245ac759b7f6)
