@@ -9,9 +9,9 @@ API_KEY = "Your API-KEY" # Your API-KEY
 LAT = Your latitude  # Your latitude
 LON = Your longitude  # Your longitude
 
-Make an free API call no more than once in 10 minutes for your location otherwise you will be blocked
-The update frequency of the OpenWeather model is not higher than once in 10 minutes
-The update frequency is set in Enviroplusweb.py to 10 minutes/600 seconds before fetching data again
+Make an free API call no more than once in 10 minutes for your location otherwise you will be blocked.
+The update frequency of the OpenWeather model is not higher than once in 10 minutes.
+The update frequency is set in Enviroplusweb.py to 10 minutes/600 seconds before fetching data again.
 
 For now it works but isn't perfect yet so please improve, such as:
 - Still have to set stepSize in main.js
