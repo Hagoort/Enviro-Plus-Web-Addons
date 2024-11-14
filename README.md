@@ -8,6 +8,7 @@ Get your free API key: https://home.openweathermap.org/users/sign_up and read: h
 API_KEY = "Your API-KEY" # Your API-KEY
 LAT = Your latitude  # Your latitude
 LON = Your longitude  # Your longitude
+Next to .py file you also need the .html file in templates directory and .js file in static directory
 
 Make an free API call no more than once in 10 minutes for your location otherwise you will be blocked.
 The update frequency of the OpenWeather model is not higher than once in 10 minutes.
@@ -20,5 +21,15 @@ For now it works but isn't perfect yet so please improve, such as:
 - ...
 
 ![Windspeed and -direction](https://github.com/user-attachments/assets/03c23231-667f-4b2a-9844-245ac759b7f6)
+
+If you would like to extend the lifetime of your pms5003 sensor and OpenWeather winddirection and -speed data use the other .py file
+Turn PMS5003 sensor on/off between readings to extend sensor lifetime using Python's serial library
+The serial port shouldn't be used by other processes. Disable Bluetooth and use the UART for PMS5003 Control. Edit the /boot/config.txt file:
+    sudo nano /boot/config.txt
+Add or ensure that the following lines are present and comment out #dtoverlay=pi3-miniuart-bt:
+    enable_uart=1
+    dtoverlay=pi3-disable-bt  # This disables Bluetooth and frees up the UART
+Now the UART is available for communicating with the PMS5003 sensor. Reboot the Pi to apply changes:
+    sudo reboot
 
 Added translation in Dutch, rename index(Dutch).html to index.html
