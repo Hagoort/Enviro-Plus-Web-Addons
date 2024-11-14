@@ -1,6 +1,8 @@
 # Enviro-Plus-Web
 Add-on Free OpenWeather winddirection and -speed
+
 Add-on Turn PMS5003 sensor on/off between readings to extend sensor lifetime
+
 to Enviro+ webapp (https://gitlab.com/idotj/enviroplusweb)
 
 # Winddirection and -speed from OpenWeather
