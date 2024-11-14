@@ -12,7 +12,7 @@ Add your free OpenWeather API key and your latitude and longitude to Enviroplusw
 Get your free API key: https://home.openweathermap.org/users/sign_up and read: https://openweathermap.org/appid
 API_KEY = "Your API-KEY" # Your API-KEY
 LAT = Your latitude  # Your latitude
-LON = Your longitude  # Your longitude
+LON = Your longitude  # Your longitude.
 Next to .py file you also need the .html file in templates directory and .js file in static/js directory
 
 Make an free API call no more than once in 10 minutes for your location otherwise you will be blocked.
