@@ -43,4 +43,5 @@ Now the UART is available for communicating with the PMS5003 sensor. Reboot the 
 
     sudo reboot
 
+# Translation Dutch language
 Added translation in Dutch for the text used in the webapp, rename index(Dutch).html to index.html
