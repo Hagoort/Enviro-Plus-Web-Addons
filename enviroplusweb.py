@@ -13,7 +13,7 @@ License: GNU
 Add-on Free OpenWeather winddirection and -speed
 Add-on Turn PMS5003 sensor on/off between readings to extend sensor lifetime
 Add-on Dewpoint
-Add-on Windchill
+Add-on Wind chill
 Author: Hagoort
 URL: https://github.com/Hagoort/Enviro-Plus-Web
 Add-ons for: https://gitlab.com/idotj/enviroplusweb
