@@ -3,6 +3,10 @@ Add-on Free OpenWeather winddirection and -speed
 
 Add-on Turn PMS5003 sensor on/off between readings to extend sensor lifetime
 
+Add-on Dewpoint
+
+Add-on Wind chill
+
 to Enviro+ webapp (https://gitlab.com/idotj/enviroplusweb)
 
 # Winddirection and -speed from OpenWeather
@@ -42,6 +46,12 @@ Add or ensure that the following lines are present and comment out #dtoverlay=pi
 Now the UART is available for communicating with the PMS5003 sensor. Reboot the Pi to apply changes:
 
     sudo reboot
+
+# Dewpoint
+Added dewpoint
+
+# Wind chill
+Added wind chill factor
 
 # Translation Dutch language
 Added translation in Dutch for the text used in the webapp, rename index(Dutch).html to index.html
