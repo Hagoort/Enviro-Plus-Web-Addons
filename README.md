@@ -31,7 +31,7 @@ For now it works but isn't perfect yet so please improve, such as:
 
 ![Windspeed and -direction](https://github.com/user-attachments/assets/03c23231-667f-4b2a-9844-245ac759b7f6)
 
-# Extend pms5003 sensor lifetime (combined with winddirection and -speed from OpenWeather)
+# Extend pms5003 sensor lifetime
 If you want to extend the lifetime of your pms5003 sensor and OpenWeather winddirection and -speed data use the other .py file.
 It turns the PMS5003 sensor on/off between readings to extend sensor lifetime using Python's serial library.
 The serial port shouldn't be used by other processes therefore disable Bluetooth and use the UART for PMS5003 Control. Edit the /boot/config.txt file:
