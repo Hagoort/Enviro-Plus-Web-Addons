@@ -5,7 +5,7 @@ Add-on Turn PMS5003 sensor on/off between readings to extend sensor lifetime
 
 Add-on Dewpoint
 
-Add-on Wind chill
+Add-on Wind chill and Heat index
 
 to Enviro+ webapp (https://gitlab.com/idotj/enviroplusweb)
 
