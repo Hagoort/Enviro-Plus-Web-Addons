@@ -345,7 +345,7 @@ def read_data(time):
     # Combine wind chill and heat index based on conditions
     # Wind Chill: U.S. National Weather Service, Wind Chill Guidelines
     # Heat Index: NOAA (National Oceanic and Atmospheric Administration) heat index formula
-    if temperature <= 10 or windspd > 4.8:  # calculate wind chill
+    if temperature <= 10 and windspd > 4.8:  # calculate wind chill
         windchill = 13.12 + 0.6215 * temperature - 11.37 * windspd**0.16 + 0.3965 * temperature * windspd**0.16  # Wind chill is the dominant factor
     elif temperature >= 26.7 and humidity >= 40:  # calculate heatindex
         windchill = 42.379 + 2.04901523 * temperature + 10.14333127 * humidity \
