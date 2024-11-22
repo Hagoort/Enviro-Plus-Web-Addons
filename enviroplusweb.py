@@ -13,7 +13,7 @@ License: GNU
 Add-on Free OpenWeather winddirection and -speed
 Add-on Turn PMS5003 sensor on/off between readings to extend sensor lifetime
 Add-on Dewpoint
-Add-on Wind chill
+Add-on Wind chill and Heat index
 Author: Hagoort
 URL: https://github.com/Hagoort/Enviro-Plus-Web
 Add-ons for: https://gitlab.com/idotj/enviroplusweb
@@ -342,11 +342,18 @@ def read_data(time):
 
     dewpoint = (243.12 * math.log((humidity / 100) * (6.112 * math.exp((17.62 * temperature) / (243.12 + temperature)) * (pressure / 1013.25)) / 6.112)) / (17.62 - math.log((humidity / 100) * (6.112 * math.exp((17.62 * temperature) / (243.12 + temperature)) * (pressure / 1013.25)) / 6.112)) # Valid at sealevel and higher altitudes
 
-    # Added wind chill and used windchill to test
-    if temperature > 10 or windspd < 4.8:
-        windchill = temperature  # No wind chill effect
+    # Combine wind chill and heat index based on conditions
+    # Wind Chill: U.S. National Weather Service, Wind Chill Guidelines
+    # Heat Index: NOAA (National Oceanic and Atmospheric Administration) heat index formula
+    if temperature <= 10 or windspd > 4.8:  # calculate wind chill
+        windchill = 13.12 + 0.6215 * temperature - 11.37 * windspd**0.16 + 0.3965 * temperature * windspd**0.16  # Wind chill is the dominant factor
+    elif temperature >= 26.7 and humidity >= 40:  # calculate heatindex
+        windchill = 42.379 + 2.04901523 * temperature + 10.14333127 * humidity \
+                     - 0.22475541 * temperature * humidity - 6.83783 * 10**-3 * temperature**2 \
+                     - 5.481717 * 10**-2 * humidity**2 + 1.22874 * 10**-3 * temperature**2 * humidity \
+                     + 8.5282 * 10**-4 * temperature * humidity**2 - 1.99 * 10**-6 * temperature**2 * humidity**2
     else:
-        windchill = 13.12 + 0.6215 * temperature - 11.37 * windspd**0.16 + 0.3965 * temperature * windspd**0.16
+        windchill = temperature  # Default to actual temperature if no other conditions are met
 
     record = {
         'time': asctime(localtime(time)),
